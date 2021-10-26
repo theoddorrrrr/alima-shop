@@ -1,0 +1,59 @@
+//Images
+._flyImage._ibg {
+    opacity: 1;
+    position: fixed;
+    z-index: 100;
+    transition: all 1s ease 0s;
+    & img {
+      width: 100%;
+    }
+}
+  
+//Общие стили
+body {
+font-family: $fontFamily;
+color: $mainColor;
+&.lock{
+    overflow: hidden;
+}
+}
+.wrapper{
+display: grid;
+grid-template-rows: 1fr auto;
+min-height: 100vh; 
+width: 100%;
+overflow: hidden;
+}
+._container {
+max-width: $maxWidthContainer + px;
+margin: 0 auto;
+padding: 0px 10px;
+@media(min-width: $md2+px) {
+    padding: 0px 15px;
+}
+}
+.btn {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 0px 15px;
+text-align: center;
+transition: all 0.3s ease 0s;
+min-height: 48px;
+&_white {
+    color: $orangeColor;
+    background-color: #fff;
+    @media (any-hover: hover) {
+    &:hover {
+        background-color: $orangeColor;
+        color: #fff;
+    }
+    }
+}
+}
+._title{
+font-size: clamp(1.5em, 3vw, 4em);
+font-weight: 700;
+line-height: 120%;
+text-align: center;
+}

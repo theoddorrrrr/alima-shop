@@ -1,0 +1,200 @@
+//Main
+.main-slider {
+    background: #fcf8f3;
+    .main-slider__container {
+      position: relative;
+      @media (min-width: $md2+px) {
+        &::before {
+          content: "";
+          background: #f9f1e7;
+          position: absolute;
+          top: 0;
+          width: 100vw;
+          right: 376px;
+          height: 100%;
+        }
+      }
+    }
+    .main-slider__body {
+      padding: 80px 0px 0px 0px;
+      @media (min-width: $md2+px) {
+        display: flex;
+        gap: 1em;
+        padding: 140px 0px 0px 0px;
+      }
+    }
+    .main-slider__content {
+      flex: 0 0 40%;
+      align-self: start;
+    }
+    .main-slider__slider {
+      align-self: flex-start;
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 5;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0px 0px 20px 0px;
+    @media (min-width: $md2+px) {
+      padding: 50px;
+      margin: 0px 0px 0px 0px;
+    }
+    .content__title {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 700;
+    text-align: center;
+      &:not(:last-child) {
+        margin: 0px 0px 16px/56px*1em 0px;
+      }
+      @media (min-width: $md2+px) {
+        font-size: 40px;
+        text-align: left;
+      }
+    }
+    .content__text {
+      font-size: 14px;
+      color: $grayColor;
+      line-height: 150%;
+      text-align: center;
+        &:not(:last-child) {
+          margin: 0px 0px 48px/20px*1em 0px;
+        }
+      @media (min-width: $md2+px) {
+        font-size: 20px;
+        text-align-last: left;
+      }
+    }
+    &__button {
+      background-color: $orangeColor;
+      min-height: 70px;
+      font-size: 14px;
+      color: white;
+      width: 100%;
+      @media (min-width: $md2+px) {
+        font-size: 20px;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #966749;
+        }
+      }
+    }
+  }
+  .slider-arrows {
+    display: flex;
+  }
+  .slider-arrow {
+    pointer-events: auto;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(232, 159, 133, 0.3);
+    color: $orangeColor;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease 0s;
+    &:not(:last-child) {
+      margin: 0px 10px 0px 0px;
+    }
+    &_prev {
+      transform: rotate(90deg);
+    }
+    &_next {
+      transform: rotate(-90deg);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: rgba(232, 159, 133, 1);
+      }
+    }
+  }
+  .slider-main {
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: $md2+px) {
+      flex-direction: column;
+    }
+    .slider-main__controls {
+      position: relative;
+      margin: 0px 0px 10px 0px
+    }
+    .slider-main__body {
+      width: 90vw;
+      overflow: visible;
+      @media (min-width: $md2+px) {
+        max-width: 55vw;
+      }
+    }
+    .slider-main__slide {
+      @media (max-width: $md2+px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .slider-main__image{
+      & img{
+        width: 100%;
+      }
+    }
+    .slider-main__content {
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 15px;
+      @media (min-width: $md3+px) {
+        padding: 30px;
+        right: 40px;
+        bottom: 40px;
+      }
+      @media (min-width: $md2+px) {
+        min-width: 300px;
+        position: absolute;
+        overflow: auto;
+        bottom: 5px;
+        right: 5px;
+        padding: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+    .slider-main__title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 120%;
+      &:not(:last-child) {
+        margin: 0px 0px 4px/28px * 1em 0px;
+      }
+    }
+    .slider-main__text {
+      line-height: 150%;
+      color: $grayColor;
+      &:not(:last-child) {
+        margin: 0px 0px 8px/16px * 1em 0px;
+      }
+    }
+    .slider-main__price {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      line-height: 150%;
+      font-weight: 600;
+      font-size: 16px;
+      &::before {
+        font-size: 12px;
+        margin: 0px 0px 0px 10px;
+      }
+    }
+  }
+  .controls-slider-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md2+px) {
+      padding: 10px 0px 10px 0px;
+    }
+  }

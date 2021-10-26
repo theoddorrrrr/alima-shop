@@ -1,0 +1,142 @@
+
+//Page advantages
+.advantages {
+    padding: 30px 0px;
+    @media (min-width: $md2+px) {
+      padding: 50px 0px;
+    }
+  }
+  .advantages__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $md2+px) {
+      justify-content: space-between;
+    }
+  }
+  .advantages__item {
+    position: relative;
+    flex: 1 1;
+    @media (max-width: $md2+px) {
+      flex-basis: 50%;
+    }
+    @media (max-width: $md4+px) {
+      flex-basis: 100%;
+    }
+    @media (any-hover: hover) {
+      &::before {
+        content:"";
+        position: absolute;
+        background-color: $orangeColor;
+        top: 0;
+        left: 0;
+        transform-origin: right;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0); 
+        transition: transform 0.5s;
+      }
+      &:hover::before {
+        content:"";
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.5s;
+      }
+      &::after {
+        content:"";
+        position: absolute;
+        background-color: $orangeColor;
+        bottom: 0;
+        left: 0;
+        transform-origin: left;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0); 
+        transition: transform 0.5s;
+      }
+      &:hover::after {
+        content:"";
+        transform: scaleX(1);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+    }
+  }
+  .advantages__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    padding: 30px;
+    transition: transition 0.5s;
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: $md2+px) {
+      flex-direction: column;
+    }
+    @media (any-hover: hover) {
+        &::before {
+          content:"";
+          position: absolute;
+          background-color: $orangeColor;
+          bottom: 0;
+          left: 0;
+          transform-origin: bottom;
+          width: 1px;
+          height: 100%;
+          transform: scaleY(0); 
+          transition: transform 0.5s;
+        }
+        &:hover::before {
+          content:"";
+          transform: scaleY(1);
+          transform-origin: top;
+          transition: transform 0.5s;
+        }
+        &::after {
+          content:"";
+          position: absolute;
+          background-color: $orangeColor;
+          bottom: 0;
+          right: 0;
+          transform-origin: top;
+          width: 1px;
+          height: 100%;
+          transform: scaleY(0); 
+          transition: transform 0.5s;
+        }
+        &:hover::after {
+          content:"";
+          transform: scaleY(1);
+          transform-origin: bottom;
+          transition: transform 0.5s;
+        }
+      }
+  }
+  .advantages__icon {
+    text-align: center;
+    align-self: center;
+    width: 40px;
+    & img {
+      width: 100%;
+    }
+  }
+  .advantages__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0px 0px 2px/18px * 1em 0px;
+    @media (min-width: $md2+px) {
+      text-align: center;
+    }
+  }
+  .advantages__text {
+    line-height: 150%;
+    color: $grayColor;
+    @media (min-width: $md2+px) {
+      text-align: center;
+    }
+  }

@@ -1,0 +1,147 @@
+//Rooms
+.rooms {
+    background: #fcf8f3;
+    padding: 20px 0px;
+  }
+  .rooms__container {
+    position: relative;
+    @media (min-width: $md2+px) {
+      display: flex;
+    }
+  }
+  .rooms__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 465 / 1240 * 100%;
+    position: relative;
+    z-index: 5;
+    align-self: center;
+    margin: 0px 0px 20px 0px;
+    @media (min-width: $md2+px) {
+      align-items: flex-start;
+      padding: 0px 50px 0px 0px;
+    }
+  }
+  .rooms__title {
+    text-align: left;
+    font-size: 24px;
+    @media (min-width: $md4+px) {
+      font-size: 20px
+  }
+    &:not(:last-child) {
+      margin: 0px 0px 8px / 40px * 1em 0px;
+    }
+  }
+  .rooms__text {
+    line-height: 150%;
+    font-weight: 500;
+    &:not(:last-child) {
+      margin: 0px 0px 24px 0px;
+    }
+  }
+  .rooms__button {
+    background: $orangeColor;
+    color: #fff;
+    min-width: 180px;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #8d6146;
+      }
+    }
+  }
+  .rooms__slider {
+    min-width: 0;
+    align-self: flex-start;
+    position: relative;
+  }
+  .slider-rooms__body {
+    width: 80vw;
+    @media (min-width: $md2+px) {
+      overflow: visible;
+      max-width: 500px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 0;
+        height: 112%;
+        width: 200%;
+        background-color: #fcf8f3;
+        z-index: 2;
+        transform: translate(-100%, 0px)
+      }
+    }
+    .swiper-wrapper {
+      overflow: visible;
+      // max-width: 400px;
+      // max-height: 580px;
+    }
+  }
+  .slider-rooms__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-rooms__image {
+    width: 400px;
+    max-height: 580px;
+    @media (min-width: $md2+px) {
+      height: 580px;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .slider-rooms__content {
+    position: absolute;
+    color: inherit;
+    max-width: 240px;
+    left: 15px;
+    bottom: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    &::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(100%, 0px);
+      width: 48px;
+      height: 48px;
+      background-color: $orangeColor;
+      color: #fff;
+    }
+  }
+  .label-slider {
+    display: grid;
+    color: $darkGrayColor;
+    gap: 8px;
+    align-items: center;
+    justify-content: start;
+    grid-template-columns: auto 27px auto;
+    &:not(:last-child) {
+      margin: 0px 0px 8px 0px;
+    }
+  }
+  .label-slider__line {
+    height: 1px;
+    background: $darkGrayColor;
+  }
+  .slider-rooms__title{
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .slider-rooms__arrows {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .slider-rooms__dotts {
+    margin: 20px 0px 0px 0px;
+  }

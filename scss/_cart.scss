@@ -1,0 +1,51 @@
+//Cart
+.cart-list {
+    overflow: auto;
+    max-height: 200px;
+  }
+  .cart-list__image {
+    flex: 0 0 100px;
+    height: 100px;
+    & img {
+      width: 100%;
+    }
+  }
+  .cart-list__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 0px 10px;
+  }
+  .cart-list__title {
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.3s ease 0s;
+    margin: 0px 0px 5px/16px*1em 0px;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $orangeColor;
+      }
+    }
+  }
+  .cart-list__quantity {
+    font-size: 14px;
+    margin: 0px 0px 5px/14px*1em 0px;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .cart-list__delete {
+    cursor: pointer;
+    color: red;
+    font-size: 14px;
+  }
+  .cart-list__item {
+    display: flex;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
